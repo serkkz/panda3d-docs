@@ -31,30 +31,43 @@ Example
 
 .. code-block:: python
 
-   import direct.directbase.DirectStart
-   from direct.gui.OnscreenText import OnscreenText
-   from direct.gui.DirectGui import *
-   from panda3d.core import *
+   from direct.showbase.ShowBase import ShowBase
+   from direct.gui.DirectGui import DirectCheckButton, OnscreenText
+   from panda3d.core import TextNode
 
-   # Add some text
-   bk_text = "This is my Demo"
-   textObject = OnscreenText(text=bk_text, pos=(0.95,-0.95), scale=0.07,
-                             fg=(1, 0.5, 0.5, 1), align=TextNode.ACenter,
-                             mayChange=1)
 
-   # Callback function to set  text
-   def setText(status):
-       if status:
-           bk_text = "Checkbox Selected"
-       else:
-           bk_text = "Checkbox Not Selected"
-   textObject.setText(bk_text)
+   class MyApp(ShowBase):
 
-   # Add button
-   b = DirectCheckButton(text = "CheckButton" ,scale=.05,command=setText)
+       def __init__(self):
+           ShowBase.__init__(self)
 
-   # Run the tutorial
-   base.run()
+           # Add some text
+           self.textObject = OnscreenText(
+               text='This is my demo',
+               pos=(0.95, -0.95),
+               scale=0.07,
+               fg=(1, 0.5, 0.5, 1),
+               align=TextNode.ACenter,
+               mayChange=1
+           )
+
+           # Add button
+           check_button = DirectCheckButton(
+               text='CheckButton',
+               scale=0.07,
+               command=self.setText
+           )
+
+       # Callback function to set text
+       def setText(self, status):
+           if status:
+               self.textObject.setText('Checkbox selected')
+           else:
+               self.textObject.setText('Checkbox not selected')
+
+
+   app = MyApp()
+   app.run()
 
 Programmatically changing the indicatorValue
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,8 +77,8 @@ to call ``setIndicatorValue`` afterwards to update the checkbutton, like:
 
 .. code-block:: python
 
-   b["indicatorValue"] = True
-   b.setIndicatorValue()
+   check_button["indicatorValue"] = True
+   check_button.setIndicatorValue()
 
 boxImage and other box\* keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
