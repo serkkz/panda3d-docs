@@ -64,11 +64,11 @@ Example
                focusInCommand=self.clearText
            )
 
-       # callback function to set text
+       # Callback function to set text
        def setText(self, textEntered):
            self.textObject.setText(textEntered)
 
-       # clear the text
+       # Clear the text
        def clearText(self):
            self.entry.enterText('')
 
