@@ -85,52 +85,77 @@ A small example on how to use it:
 
 .. code-block:: python
 
-   from direct.directbase import DirectStart
-   from direct.gui.DirectGui import *
-   from panda3d.core import *
+   from direct.showbase.ShowBase import ShowBase
+   from direct.gui.DirectGui import DirectScrolledList, DirectButton, DirectLabel
 
-   b1 = DirectButton(text=("Button1", "click!", "roll", "disabled"),
-                     text_scale=0.1, borderWidth=(0.01, 0.01),
-                     relief=2)
 
-   b2 = DirectButton(text=("Button2", "click!", "roll", "disabled"),
-                     text_scale=0.1, borderWidth=(0.01, 0.01),
-                     relief=2)
+   class MyApp(ShowBase):
 
-   l1 = DirectLabel(text="Test1", text_scale=0.1)
-   l2 = DirectLabel(text="Test2", text_scale=0.1)
-   l3 = DirectLabel(text="Test3", text_scale=0.1)
+       def __init__(self):
+           ShowBase.__init__(self)
 
-   numItemsVisible = 4
-   itemHeight = 0.11
+           # Add 2 button
+           button_1 = DirectButton(
+               text=('button1', 'click!', 'roll', 'disabled'),
+               text_scale=0.1,
+               borderWidth=(0.01, 0.01),
+               relief=2
+           )
 
-   myScrolledList = DirectScrolledList(
-       decButton_pos=(0.35, 0, 0.53),
-       decButton_text="Dec",
-       decButton_text_scale=0.04,
-       decButton_borderWidth=(0.005, 0.005),
+           button_2 = DirectButton(
+               text=('button2', 'click!', 'roll', 'disabled'),
+               text_scale=0.1,
+               borderWidth=(0.01, 0.01),
+               relief=2
+           )
 
-       incButton_pos= (0.35, 0, -0.02),
-       incButton_text="Inc",
-       incButton_text_scale=0.04,
-       incButton_borderWidth=(0.005, 0.005),
+           # Add 4 label
+           label_1 = DirectLabel(
+               text='Test1',
+               text_scale=0.1
+           )
 
-       frameSize=(0.0, 0.7, -0.05, 0.59),
-       frameColor=(1,0,0,0.5),
-       pos=(-1, 0, 0),
-       items=[b1, b2],
-       numItemsVisible=numItemsVisible,
-       forceHeight=itemHeight,
-       itemFrame_frameSize=(-0.2, 0.2, -0.37, 0.11),
-       itemFrame_pos=(0.35, 0, 0.4),
-   )
+           label_2 = DirectLabel(
+               text='Test2',
+               text_scale=0.1
+           )
 
-   myScrolledList.addItem(l1)
-   myScrolledList.addItem(l2)
-   myScrolledList.addItem(l3)
+           label_3 = DirectLabel(
+               text='Test3',
+               text_scale=0.1
+           )
 
-   for fruit in ['apple', 'pear', 'banana', 'orange']:
-       l = DirectLabel(text=fruit, text_scale=0.1)
-       myScrolledList.addItem(l)
+           label_4 = DirectLabel(
+               text='Test4',
+               text_scale=0.1
+           )
 
-   base.run()
+           # Add scrolled list
+           myScrolledList = DirectScrolledList(
+               decButton_pos=(0.35, 0, 0.53),
+               decButton_text='Dec',
+               decButton_text_scale=0.04,
+               decButton_borderWidth=(0.005, 0.005),
+               incButton_pos=(0.35, 0, -0.02),
+               incButton_text='Inc',
+               incButton_text_scale=0.04,
+               incButton_borderWidth=(0.005, 0.005),
+               frameSize=(0.0, 0.7, -0.05, 0.59),
+               frameColor=(1, 0, 0, 0.5),
+               pos=(-1, 0, 0),
+               items=[button_1, button_2],
+               numItemsVisible=4,
+               forceHeight=0.11,
+               itemFrame_frameSize=(-0.2, 0.2, -0.37, 0.11),
+               itemFrame_pos=(0.35, 0, 0.4)
+           )
+
+           # Add item in scrolled list
+           myScrolledList.addItem(label_1)
+           myScrolledList.addItem(label_2)
+           myScrolledList.addItem(label_3)
+           myScrolledList.addItem(label_4)
+
+
+   app = MyApp()
+   app.run()
