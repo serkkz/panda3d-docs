@@ -41,43 +41,48 @@ YesNo Dialog Example
 
 .. code-block:: python
 
-   import direct.directbase.DirectStart
-   from direct.gui.OnscreenText import OnscreenText
-   from direct.gui.DirectGui import *
-   from direct.task import Task
-   from direct.actor import Actor
-   from direct.interval.IntervalGlobal import *
-   from panda3d.core import *
+   from direct.showbase.ShowBase import ShowBase
+   from direct.gui.DirectGui import YesNoDialog, OnscreenText
+   from panda3d.core import TextNode
 
-   # Add some text
-   bk_text = "DirectDialog- YesNoDialog Demo"
-   textObject = OnscreenText(text=bk_text, pos=(0.85,0.85),
-       scale=0.07, fg=(1, 0.5, 0.5, 1), align=TextNode.ACenter, mayChange=1)
 
-   # Add some text
-   output = ""
-   textObject = OnscreenText(text=output, pos=(0.95,-0.95),
-       scale=0.07, fg=(1, 0.5, 0.5, 1), align=TextNode.ACenter, mayChange=1)
+   class MyApp(ShowBase):
 
-   # Callback function to set text
-   def itemSel(arg):
-       if arg:
-           output = "Button Selected is: Yes"
-       else:
-           output = "Button Selected is: No"
-       textObject.setText(output)
+       def __init__(self):
+           ShowBase.__init__(self)
 
-   # Create a frame
-   dialog = YesNoDialog(dialogName="YesNoCancelDialog", text="Please choose:",
-                        command=itemSel)
+           # Add some text
+           self.textObject = OnscreenText(
+               text='',
+               pos=(0.95, -0.95),
+               scale=0.07,
+               fg=(1, 0.5, 0.5, 1),
+               align=TextNode.ACenter,
+               mayChange=1
+           )
 
-   base.camera.setPos(0, -20, 0)
-   base.run()
+           # Add dialog
+           dialog = YesNoDialog(
+               dialogName='YesNoCancelDialog',
+               text='Please choose:',
+               command=self.itemSel
+           )
+
+       # Callback function to set text
+       def itemSel(self, arg):
+           if arg:
+               self.textObject.setText('Button selected is: Yes')
+           else:
+               self.textObject.setText('Button selected is: No')
+
+
+   app = MyApp()
+   app.run()
 
 .. note::
    The OkDialog causes an error if being created a second time after destroying
-   it with ``myOkDialog.destroy()``. To solve this you can use:
+   it with ``dialog.destroy()``. To solve this you can use:
 
-   .. code-block:: python
+.. code-block:: python
 
-      myOkDialog.cleanup()
+   dialog.cleanup()
