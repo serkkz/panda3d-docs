@@ -85,4 +85,3 @@ DirectScrollBar
           pageSize=3,
           orientation=DGG.VERTICAL
       )
-
