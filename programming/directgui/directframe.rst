@@ -110,5 +110,5 @@ DirectFrame
 
    .. code-block:: python
 
-      myDirectobject["yourKeyword"] = value
+      myDirectobject['yourKeyword'] = value
 
