@@ -41,11 +41,25 @@ DirectFrame
 
    .. code-block:: python
 
-      from direct.gui.DirectGui import DirectFrame
+   from direct.showbase.ShowBase import ShowBase
+   from direct.gui.DirectGui import DirectFrame
 
-      myFrame = DirectFrame(frameColor=(0, 0, 0, 1),
-                            frameSize=(-1, 1, -1, 1),
-                            pos=(1, -1, -1))
+
+   class MyApp(ShowBase):
+
+       def __init__(self):
+           ShowBase.__init__(self)
+
+           # Add frame
+           frame = DirectFrame(
+               pos=(1, -1, -1),
+               frameColor=(0, 0, 0, 1),
+               frameSize=(-1, 1, -1, 1)
+           )
+
+
+   app = MyApp()
+   app.run()
 
    This will give you a black frame appearing at the lower right section of the
    Panda window.
@@ -67,11 +81,25 @@ DirectFrame
 
    .. code-block:: python
 
-      from direct.gui.DirectGui import DirectFrame
+   from direct.showbase.ShowBase import ShowBase
+   from direct.gui.DirectGui import DirectFrame
 
-      myFrame = DirectFrame(frameColor=(0, 0, 0, 1),
-                            frameSize=(-1, 1, -1, 1))
-      myFrame.setPos(-0.5, 0, -0.5)
+
+   class MyApp(ShowBase):
+
+       def __init__(self):
+           ShowBase.__init__(self)
+
+           # Add frame
+           frame = DirectFrame(
+               pos=(-0.5, 0, -0.5),
+               frameColor=(0, 0, 0, 1),
+               frameSize=(-1, 1, -1, 1)
+           )
+
+
+   app = MyApp()
+   app.run()
 
    This will give us a black frame that is located at the lower left side of the
    screen.
