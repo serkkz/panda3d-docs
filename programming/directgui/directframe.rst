@@ -15,7 +15,7 @@ DirectFrame
 
    Like any other DirectGUI object, the DirectFrame is called as such:
 
-   .. code-block:: python
+.. code-block:: python
 
       DirectFrame(keyword=value, keyword=value, ...)
 
@@ -39,7 +39,7 @@ DirectFrame
    Now as an example let us make a single frame appear on the screen, for that
    the code would be the following:
 
-   .. code-block:: python
+.. code-block:: python
 
       from direct.gui.DirectGui import DirectFrame
 
@@ -65,7 +65,7 @@ DirectFrame
 
    The example above would change as follows:
 
-   .. code-block:: python
+.. code-block:: python
 
    from direct.showbase.ShowBase import ShowBase
    from direct.gui.DirectGui import DirectFrame
@@ -94,6 +94,6 @@ DirectFrame
    DirectGUI objects a third way to access and change properties is the
    following:
 
-   .. code-block:: python
+.. code-block:: python
 
-      myDirectobject["yourKeyword"] = value
+   myDirectobject["yourKeyword"] = value
