@@ -41,7 +41,7 @@ the corresponding state, like this:
 
 .. code-block:: python
 
-   b = DirectButton(text=("OK", "click!", "rolling over", "disabled"))
+   button = DirectButton(text=("OK", "click!", "rolling over", "disabled"))
 
 The above example would create a DirectButton whose label reads "OK" when it is
 not being touched, but it will change to a completely different label as the
@@ -62,10 +62,14 @@ different states like this:
 .. code-block:: python
 
    maps = loader.loadModel('button_maps')
-   b = DirectButton(geom=(maps.find('**/button_ready'),
-                          maps.find('**/button_click'),
-                          maps.find('**/button_rollover'),
-                          maps.find('**/button_disabled')))
+   button = DirectButton(
+       geom=(
+           maps.find('**/button_ready'),
+           maps.find('**/button_click'),
+           maps.find('**/button_rollover'),
+           maps.find('**/button_disabled')
+       )
+   )
 
 You can also access one of the state-specific NodePaths after the button has
 been created with the interface ``myButton.stateNodePath[stateNumber]``.
