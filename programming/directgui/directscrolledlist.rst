@@ -62,11 +62,13 @@ buttons appropriately.
 
    myScrolledList = DirectScrolledList(
        incButton_pos=(.5, 0, 0), incButton_text="Inc",
-       decButton_pos=(-.5, 0, 0), decButton_text="Dec")
+       decButton_pos=(-.5, 0, 0), decButton_text="Dec"
+   )
+   
    myScrolledList.incButton['frameSize'] = (0, 0.2, 0, 0.2)
    myScrolledList.decButton['frameSize'] = (0, 0.2, 0, 0.2)
-   myScrolledList.incButton['text_scale'] = .2
-   myScrolledList.decButton['text_scale'] = .2
+   myScrolledList.incButton['text_scale'] = 0.2
+   myScrolledList.decButton['text_scale'] = 0.2
 
 ================= ==================================================== ==============================
 Keyword           Definition                                           Value
