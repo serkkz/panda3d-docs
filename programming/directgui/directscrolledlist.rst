@@ -140,10 +140,12 @@ A small example on how to use it:
                decButton_text='Dec',
                decButton_text_scale=0.04,
                decButton_borderWidth=(0.005, 0.005),
+               
                incButton_pos=(0.35, 0, -0.02),
                incButton_text='Inc',
                incButton_text_scale=0.04,
                incButton_borderWidth=(0.005, 0.005),
+               
                frameSize=(0.0, 0.7, -0.05, 0.59),
                frameColor=(1, 0, 0, 0.5),
                pos=(-1, 0, 0),
