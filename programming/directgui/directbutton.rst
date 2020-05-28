@@ -59,7 +59,7 @@ You can create buttons as geometry in the 3D editor and apply them to four diffe
    button = DirectButton(geom=(ready, click, rollover, disabled))
 
 You can also access one of the state-specific NodePaths after the button has
-been created with the interface.
+been created with the interface:
 
 .. code-block:: python
 
