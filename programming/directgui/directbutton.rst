@@ -47,7 +47,7 @@ The above example would create a DirectButton whose label reads "OK" when it is
 not being touched, but it will change to a completely different label as the
 mouse rolls over it and clicks it.
 
-You can create an model file in a 3D editor and apply it to four different states like this:
+You can create model files in the 3D editor and apply them to four different States, such as this:
 
 .. code-block:: python
 
