@@ -10,7 +10,7 @@ every DirectGui object.
 
 Each DirectGui object has a predefined number of available "states", and a
 current state. This concept of "state" is completely unrelated to Panda's
-:ref: FSM <finite-state-machines> object. For a DirectGui object, the current
+:ref: FSM `<finite-state-machines>` object. For a DirectGui object, the current
 state is simply as an integer number, which is used to select one of a list of
 different NodePaths that represent the way the DirectGui object appears in
 each state. Each DirectGui object can therefore have a completely different
