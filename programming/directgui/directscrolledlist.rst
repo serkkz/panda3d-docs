@@ -40,8 +40,10 @@ values except relief appearance as you initialize the list:
 
 .. code-block:: python
 
-   myScrolledList = DirectScrolledList(incButton_propertyName=value,
-                                       decButton_propertyName=value)
+   myScrolledList = DirectScrolledList(
+       incButton_propertyName=value,
+       decButton_propertyName=value
+   )
 
 incButton scrolls forward through the list; decButton backward. Note that this
 only works for initialization. To change a property of the scroll buttons later
