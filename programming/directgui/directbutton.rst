@@ -61,15 +61,12 @@ different states like this:
 
 .. code-block:: python
 
-   maps = loader.loadModel('button_maps')
-   button = DirectButton(
-       geom=(
-           maps.find('**/button_ready'),
-           maps.find('**/button_click'),
-           maps.find('**/button_rollover'),
-           maps.find('**/button_disabled')
-       )
-   )
+   ready = loader.loadModel('button_ready')
+   click = loader.loadModel('button_click')
+   rollover = loader.loadModel('button_rollover')
+   disabled = loader.loadModel('button_disabled')
+
+   button = DirectButton(geom=(ready, click, rollover, disabled))
 
 You can also access one of the state-specific NodePaths after the button has
 been created with the interface ``myButton.stateNodePath[stateNumber]``.
