@@ -41,7 +41,7 @@ the corresponding state, like this:
 
 .. code-block:: python
 
-   button = DirectButton(text=("OK", "click!", "rolling over", "disabled"))
+   button = DirectButton(text=('OK', 'click!', 'rolling over', 'disabled'))
 
 The above example would create a DirectButton whose label reads "OK" when it is
 not being touched, but it will change to a completely different label as the
