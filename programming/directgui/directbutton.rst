@@ -47,17 +47,7 @@ The above example would create a DirectButton whose label reads "OK" when it is
 not being touched, but it will change to a completely different label as the
 mouse rolls over it and clicks it.
 
-Another common example is a button you have completely customized by painting
-four different texture maps to represent the button in each state. Normally, you
-would convert these texture maps into an egg file using ``egg-texture-cards``
-like this:
-
-.. code-block:: bash
-
-   egg-texture-cards -o button_maps.egg -p 240,240 button_ready.png button_click.png button_rollover.png button_disabled.png
-
-And then you would load up the that egg file in Panda and apply it to the four
-different states like this:
+You can create an EGG file in a 3D editor and apply it to four different states like this:
 
 .. code-block:: python
 
