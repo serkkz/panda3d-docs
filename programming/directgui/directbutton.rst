@@ -8,13 +8,7 @@ execute an arbitrary function when the user clicks on the object. This is
 actually implemented by taking advantage of the "state" system supported by
 every DirectGui object.
 
-Each DirectGui object has a predefined number of available "states", and a
-current state. This concept of "state" is completely unrelated to Panda's
-:ref: FSM `<finite-state-machines>` object. For a DirectGui object, the current
-state is simply as an integer number, which is used to select one of a list of
-different NodePaths that represent the way the DirectGui object appears in
-each state. Each DirectGui object can therefore have a completely different
-appearance in each of its states.
+Each DirectGui object has a predefined number of available "states", and a current state. This concept of "state" is completely unrelated to Panda's :ref:`FSM <finite-state-machines>` object. For a DirectGui object, the current state is simply as an integer number, which is used to select one of a list of different NodePaths that represent the way the DirectGui object appears in each state. Each DirectGui object can therefore have a completely different appearance in each of its states.
 
 Most types of DirectGui objects do not use this state system, and only have
 one state, which is state 0. The DirectButton is presently the only predefined
