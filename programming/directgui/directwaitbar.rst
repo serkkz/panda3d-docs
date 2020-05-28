@@ -11,7 +11,7 @@ set the value (it ranges from 0 to 100 by default):
 
 .. code-block:: python
 
-   myWaitBar['value'] = number
+   wait_bar['value'] = number
 
 ============== ============================================================================================= ================================
 Keyword        Definition                                                                                    Value
