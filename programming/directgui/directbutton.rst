@@ -69,7 +69,7 @@ different states like this:
    button = DirectButton(geom=(ready, click, rollover, disabled))
 
 You can also access one of the state-specific NodePaths after the button has
-been created with the interface ``myButton.stateNodePath[stateNumber]``.
+been created with the interface ``button.stateNodePath[stateNumber]``.
 Normally, however, you should not need to access these NodePaths directly.
 
 The following are the DirectGui keywords that are specific to a DirectButton.
