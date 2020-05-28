@@ -47,7 +47,7 @@ The above example would create a DirectButton whose label reads "OK" when it is
 not being touched, but it will change to a completely different label as the
 mouse rolls over it and clicks it.
 
-You can create an EGG file in a 3D editor and apply it to four different states like this:
+You can create an model file in a 3D editor and apply it to four different states like this:
 
 .. code-block:: python
 
