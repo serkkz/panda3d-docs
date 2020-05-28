@@ -59,8 +59,11 @@ You can create buttons as geometry in the 3D editor and apply them to four diffe
    button = DirectButton(geom=(ready, click, rollover, disabled))
 
 You can also access one of the state-specific NodePaths after the button has
-been created with the interface ``button.stateNodePath[stateNumber]``.
-Normally, however, you should not need to access these NodePaths directly.
+been created with the interface.
+
+.. code-block:: python
+
+   button.stateNodePath[stateNumber]
 
 The following are the DirectGui keywords that are specific to a DirectButton.
 (These are in addition to the generic DirectGui keywords described on the
