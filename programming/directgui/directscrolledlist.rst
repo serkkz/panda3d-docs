@@ -63,8 +63,8 @@ buttons appropriately.
 .. code-block:: python
 
    myScrolledList = DirectScrolledList(
-       incButton_pos=(.5, 0, 0), incButton_text="Inc",
-       decButton_pos=(-.5, 0, 0), decButton_text="Dec"
+       incButton_pos=(0.5, 0, 0), incButton_text="Inc",
+       decButton_pos=(-0.5, 0, 0), decButton_text="Dec"
    )
    
    myScrolledList.incButton['frameSize'] = (0, 0.2, 0, 0.2)
