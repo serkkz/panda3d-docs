@@ -41,7 +41,7 @@ the corresponding state, like this:
 
 .. code-block:: python
 
-   button = DirectButton(text=('OK', 'click!', 'rolling over', 'disabled'))
+   button = DirectButton(text=('caption', 'click!', 'rollover', 'disabled'))
 
 The above example would create a DirectButton whose label reads "OK" when it is
 not being touched, but it will change to a completely different label as the
@@ -51,12 +51,12 @@ You can create buttons as geometry in the 3D editor and apply them to four diffe
 
 .. code-block:: python
 
-   ready = loader.loadModel('button_ready')
+   caption = loader.loadModel('button_caption')
    click = loader.loadModel('button_click')
    rollover = loader.loadModel('button_rollover')
    disabled = loader.loadModel('button_disabled')
 
-   button = DirectButton(geom=(ready, click, rollover, disabled))
+   button = DirectButton(geom=(caption, click, rollover, disabled))
 
 You can also access one of the state-specific NodePaths after the button has
 been created with the interface:
@@ -114,7 +114,7 @@ Example
 
            # Add button
            self.button = DirectButton(
-               text=('OK', 'click!', 'rolling over', 'disabled'),
+               text=('caption', 'click!', 'rollover', 'disabled'),
                scale=0.07,
                command=self.my_function
            )
