@@ -117,11 +117,11 @@ Example
            button = DirectButton(
                text=('OK', 'click!', 'rolling over', 'disabled'),
                scale=0.07,
-               command=self.setText
+               command=self.set_message
            )
 
        # Callback function to set text
-       def setText(self):
+       def set_message(self):
            self.text_message.setText('Button clicked')
 
 
