@@ -87,7 +87,6 @@ properties by treating the element as a dictionary:
 .. code-block:: python
 
    button["state"] = DGG.DISABLED
-
 Example
 -------
 
