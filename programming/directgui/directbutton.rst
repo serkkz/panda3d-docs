@@ -109,8 +109,7 @@ Example
                pos=(0.95, -0.95),
                scale=0.07,
                fg=(1, 0.5, 0.5, 1),
-               align=TextNode.ACenter,
-               mayChange=1
+               align=TextNode.ACenter
            )
 
            # Add button
