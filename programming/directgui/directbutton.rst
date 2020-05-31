@@ -116,11 +116,11 @@ Example
            self.button = DirectButton(
                text=('OK', 'click!', 'rolling over', 'disabled'),
                scale=0.07,
-               command=self.set_message
+               command=self.my_function
            )
 
-       # Function to set text and disabled button
-       def set_message(self):
+       # Function to set text message and disabled button
+       def my_function(self):
            self.message.setText('Button clicked')
            self.button["state"] = DGG.DISABLED
 
