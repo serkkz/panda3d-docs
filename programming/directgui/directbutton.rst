@@ -104,7 +104,7 @@ Example
            ShowBase.__init__(self)
 
            # Add some text
-           self.text_message = OnscreenText(
+           self.message = OnscreenText(
                text='This is my demo',
                pos=(0.95, -0.95),
                scale=0.07,
@@ -121,7 +121,7 @@ Example
 
        # Callback function to set text
        def set_message(self):
-           self.text_message.setText('Button clicked')
+           self.message.setText('Button clicked')
 
 
    app = MyApp()
