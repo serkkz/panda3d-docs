@@ -128,9 +128,6 @@ Example
    app = MyApp()
    app.run()
 
-Note that you will not be able to set the text unless the mayChange flag is 1.
-This is an optimization, which is easily missed by newcomers.
-
 When you are positioning your button, keep in mind that the button's vertical
 center is located at the base of the text. For example, if you had a button with
 the word "Apple", the vertical center would be aligned with the base of the
