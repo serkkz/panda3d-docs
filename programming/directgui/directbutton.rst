@@ -86,7 +86,7 @@ properties by treating the element as a dictionary:
 
 .. code-block:: python
 
-   button["state"] = DGG.DISABLED
+   button['state'] = DGG.DISABLED
    
 Example
 -------
@@ -122,7 +122,7 @@ Example
        # Function to set text message and disabled button
        def my_function(self):
            self.message.setText('Button clicked')
-           self.button["state"] = DGG.DISABLED
+           self.button['state'] = DGG.DISABLED
 
 
    app = MyApp()
