@@ -94,7 +94,7 @@ Example
 .. code-block:: python
 
    from direct.showbase.ShowBase import ShowBase
-   from direct.gui.DirectGui import DirectButton, OnscreenText
+   from direct.gui.DirectGui import DirectButton, OnscreenText, DGG
    from panda3d.core import TextNode
 
 
@@ -113,15 +113,16 @@ Example
            )
 
            # Add button
-           button = DirectButton(
+           self.button = DirectButton(
                text=('OK', 'click!', 'rolling over', 'disabled'),
                scale=0.07,
                command=self.set_message
            )
 
-       # Callback function to set text
+       # Function to set text and disabled button
        def set_message(self):
            self.message.setText('Button clicked')
+           self.button["state"] = DGG.DISABLED
 
 
    app = MyApp()
