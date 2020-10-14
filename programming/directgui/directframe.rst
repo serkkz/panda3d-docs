@@ -68,8 +68,8 @@ aspect2d so the will stay fixed on-screen even when your camera moves. Newly
 created objects usually are drawn on top of already existing ones, unless you
 change it manually.
 
-You can also position the frame using the ``set_pos()``
-method and apply other methods to the available properties.
+You can also position the frame using the ``set_pos()`` method and use other 
+methods to access properties, such as scaling.
 
 Example
 -------
@@ -87,9 +87,12 @@ Example
 
            # Add frame
            frame = DirectFrame(
-               pos=(-0.5, 0, -0.5),
                frameSize=(-1, 1, -1, 1)
            )
+
+           frame.set_pos(1, -1, -1)
+           frame.set_scale(1.5)
+           frame.set_color(0, 0, 0, 1)
 
 
    app = MyApp()
