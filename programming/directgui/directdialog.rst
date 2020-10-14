@@ -36,8 +36,8 @@ extraArgs        Extra arguments to the function specified in command           
 fadeScreen       If 1, fades screen to black when the dialog appears                                                                            0 or 1
 ================ ============================================================================================================================== =======================
 
-YesNo Dialog Example
---------------------
+Example
+-------
 
 .. code-block:: python
 
