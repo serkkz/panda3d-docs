@@ -43,7 +43,8 @@ incButton_geom, incButton_relief, incButton_text, incButton_frameSize, etc. Para
 decButton_geom, decButton_relief, decButton_text, decButton_frameSize, etc. Parameters to control the look of the upper or left scroll button                                                                                                                            Any parameters appropriate to :ref:`directbutton`
 =========================================================================== ============================================================================================================================================================================================ =================================================
 
-Here is a small example on how to create the scrollbar:
+Example
+-------
 
 .. code-block:: python
 
