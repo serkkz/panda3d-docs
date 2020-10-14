@@ -43,7 +43,7 @@ the corresponding state, like this:
 
    button = DirectButton(text=('caption', 'click!', 'rollover', 'disabled'))
 
-The above example would create a DirectButton whose label reads "OK" when it is
+The above example would create a DirectButton whose label reads "caption" when it is
 not being touched, but it will change to a completely different label as the
 mouse rolls over it and clicks it.
 
