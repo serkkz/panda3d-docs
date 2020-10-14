@@ -34,8 +34,8 @@ frameColor sets the color of the object’s frame (R,G,B,A)
 pos        sets the position of the object      (X,Y,Z)
 ========== ==================================== =======================
 
-Now as an example let us make a single frame appear on the screen, for that
-the code would be the following:
+Example
+-------
 
 .. code-block:: python
 
@@ -58,9 +58,6 @@ the code would be the following:
 
    app = MyApp()
    app.run()
-
-This will give you a black frame appearing at the lower right section of the
-Panda window.
 
 Keep in mind, if your screen is non-square you will see the background color
 you have set (or the default one if you have not set any) where there is no
