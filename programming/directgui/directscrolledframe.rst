@@ -45,6 +45,9 @@ horizontalScroll_relief, horizontalScroll_frameSize, etc. Parameters to control 
 As a very small and simple example on how to use this element we have a simple
 scrolled frame on the middle of the screen:
 
+Example
+-------
+
 .. code-block:: python
 
    from direct.showbase.ShowBase import ShowBase
