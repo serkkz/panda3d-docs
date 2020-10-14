@@ -68,11 +68,11 @@ aspect2d so the will stay fixed on-screen even when your camera moves. Newly
 created objects usually are drawn on top of already existing ones, unless you
 change it manually.
 
-Additionally you can position the frame using
-``setPos()``. This works with other
-aspects like scale as well.
+You can also position the frame using the ``set_pos()``
+method and apply other methods to the available properties.
 
-The example above would change as follows:
+Example
+-------
 
 .. code-block:: python
 
