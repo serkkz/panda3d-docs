@@ -103,6 +103,9 @@ Usually one would decide on one of the ways to read and write values for
 DirectGUI objects a third way to access and change properties is the
 following:
 
+Example
+-------
+
 .. code-block:: python
 
    from direct.showbase.ShowBase import ShowBase
