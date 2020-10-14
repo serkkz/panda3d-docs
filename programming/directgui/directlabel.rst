@@ -23,3 +23,28 @@ Keyword     Definition                                Value
 =========== ========================================= ======
 activeState The “active” or normal state of the label Number
 =========== ========================================= ======
+
+Example
+-------
+
+.. code-block:: python
+
+    from direct.showbase.ShowBase import ShowBase
+    from direct.gui.DirectGui import DirectLabel
+
+
+    class MyApp(ShowBase):
+
+        def __init__(self):
+            ShowBase.__init__(self)
+
+            # Add label
+            label_1 = DirectLabel(
+                text='Text',
+                text_scale=0.1,
+                relief=None
+            )
+
+
+    app = MyApp()
+    app.run()
