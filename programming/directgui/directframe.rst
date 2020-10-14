@@ -98,8 +98,6 @@ Example
    app = MyApp()
    app.run()
 
-This will give us a black frame that is located at the lower left side of the
-screen.
 
 Usually one would decide on one of the ways to read and write values for
 DirectGUI objects a third way to access and change properties is the
@@ -107,4 +105,24 @@ following:
 
 .. code-block:: python
 
-      myDirectobject['yourKeyword'] = value
+   from direct.showbase.ShowBase import ShowBase
+   from direct.gui.DirectGui import DirectFrame
+
+
+   class MyApp(ShowBase):
+
+       def __init__(self):
+           ShowBase.__init__(self)
+
+           # Add frame
+           frame = DirectFrame(
+               frameSize=(-1, 1, -1, 1)
+           )
+
+           frame.set_pos(1, -1, -1)
+           frame.set_scale(1.5)
+           frame.set_color(0, 0, 0, 1)
+
+
+   app = MyApp()
+   app.run()
