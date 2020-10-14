@@ -50,9 +50,9 @@ Example
 
            # Add frame
            frame = DirectFrame(
-               pos=(1, -1, -1),
+               frameSize=(-1, 1, -1, 1),
                frameColor=(0, 0, 0, 1),
-               frameSize=(-1, 1, -1, 1)
+               pos=(1, -1, -1)
            )
 
 
